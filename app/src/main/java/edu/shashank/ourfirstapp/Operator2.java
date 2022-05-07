@@ -26,7 +26,6 @@ public class Operator2 extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_operator2);
 
-
         text1 = findViewById(R.id.input1);
         text2 = findViewById(R.id.input2);
 
@@ -41,46 +40,22 @@ public class Operator2 extends AppCompatActivity implements View.OnClickListener
         multiply.setOnClickListener(this);
         divide.setOnClickListener(this);
         modulus.setOnClickListener(this);
-
-//        subtract.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                int value1 = Integer.parseInt(text1.getText().toString());
-//                int value2 = Integer.parseInt(text2.getText().toString());
-//
-//                int subtractText = value1 - value2;
-//
-//                Toast.makeText(
-//                        view.getContext(),
-//                        subtractText + "",
-//                        Toast.LENGTH_LONG
-//                ).show();
-//            }
-//        });
-//
-//        sum.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                int value1 = Integer.parseInt(text1.getText().toString());
-//                int value2 = Integer.parseInt(text2.getText().toString());
-//
-//                int sumText = value1 + value2;
-//
-//                Toast.makeText(
-//                        view.getContext(),
-//                        sumText + "",
-//                        Toast.LENGTH_LONG
-//                ).show();
-//            }
-//        });
     }
 
     @Override
     public void onClick(View view) {
 
         int value1 = Integer.parseInt(text1.getText().toString());
-        int value2= Integer.parseInt(text2.getText().toString());
-        int result = 0;
+        int value2 = Integer.parseInt(text2.getText().toString());
+
+        float result = 0;
+
+//        Conditional Statements:
+//        If else, Switch
+
+//        loops
+//        for, while, foreach, do-while
+
 
         switch (view.getId()) {
             case R.id.sum:
@@ -93,13 +68,20 @@ public class Operator2 extends AppCompatActivity implements View.OnClickListener
                 result = value1 * value2;
                 break;
             case R.id.divide:
-                result = value1 / value2;
+                result = (float) value1 / value2;
                 break;
             case R.id.mod:
                 result = value1 % value2;
                 break;
-
+            default:
+                result = 0;
         }
-  Toast.makeText(view.getContext(), result + "", Toast.LENGTH_SHORT).show();
+
+        Toast.makeText(view.getContext(), result + "", Toast.LENGTH_SHORT).show();
     }
 }
+
+// Recursion
+
+
+
