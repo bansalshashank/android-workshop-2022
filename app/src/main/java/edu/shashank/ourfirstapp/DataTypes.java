@@ -43,7 +43,7 @@ public class DataTypes {
             50 //tableOfTen[4]
     };
 
-    public int arr[] = new int[5];
+    public int[] arr = new int[5];
 
 
 }

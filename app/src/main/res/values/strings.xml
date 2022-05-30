@@ -19,4 +19,6 @@
     <string name="sunday">Sunday</string>
     <string name="invalidDay">Invalid Day of the Week</string>
     <string name="counterButtonText">Start Counter</string>
+    <string name="intent1ButtonText">Goto Intent2</string>
+    <string name="intent2ButtonText">Goto Intent1</string>
 </resources>

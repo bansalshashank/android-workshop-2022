@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OurFirstApp">
         <activity
-            android:name=".Loops"
+            android:name=".Intent2"
+            android:exported="false" />
+        <activity
+            android:name=".Intent1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,17 +22,23 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Operator2"
+            android:name=".Loops2"
             android:exported="true">
         </activity>
         <activity
+            android:name=".Loops"
+            android:exported="true" />
+        <activity
+            android:name=".Operator2"
+            android:exported="true" />
+        <activity
             android:name=".OperatorActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.OurFirstApp.NoActionBar"></activity>
+            android:theme="@style/Theme.OurFirstApp.NoActionBar" />
         <activity
             android:name=".FirstActivity"
             android:exported="true" />
