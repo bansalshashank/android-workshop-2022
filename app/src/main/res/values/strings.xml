@@ -21,4 +21,8 @@
     <string name="counterButtonText">Start Counter</string>
     <string name="intent1ButtonText">Goto Intent2</string>
     <string name="intent2ButtonText">Goto Intent1</string>
+
+    <string name="getInButtonText">Let\'s Go</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="addNewNoteButtonText">Add</string>
 </resources>

@@ -10,10 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OurFirstApp">
         <activity
-            android:name=".Intent2"
+            android:name=".NewNote"
             android:exported="false" />
         <activity
-            android:name=".Intent1"
+            android:name=".dashboard_new"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard"
+            android:exported="false"
+            android:label="@string/title_activity_dashboard"
+            android:theme="@style/Theme.OurFirstApp.NoActionBar" />
+        <activity
+            android:name=".Home"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +30,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Intent2"
+            android:exported="false" />
+        <activity
+            android:name=".Intent1"
+            android:exported="true" />
+        <activity
             android:name=".Loops2"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Loops"
             android:exported="true" />
