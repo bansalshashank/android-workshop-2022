@@ -34,7 +34,6 @@ public class dashboard_new extends AppCompatActivity {
 
         ArrayList list = new ArrayList();
         SharedPreferences preferences = getSharedPreferences("myNotes", Context.MODE_PRIVATE);
-
         Map<String, String> itemsMap = (Map<String, String>) preferences.getAll();
 
         itemsMap.forEach((key, value) -> {
@@ -49,8 +48,13 @@ public class dashboard_new extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                TextView v = (TextView) view;
-                Toast.makeText(dashboard_new.this, v.getText().toString() + i +"   " + l, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(view.getContext(), NewNote.class);
+                intent.putExtra("hasNote", true);
+
+                TextView text = (TextView)view;
+                intent.putExtra("noteText", text.getText());
+
+                startActivity(intent);
             }
         });
 

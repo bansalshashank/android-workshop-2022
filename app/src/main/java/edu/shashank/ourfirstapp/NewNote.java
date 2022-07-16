@@ -21,7 +21,7 @@ public class NewNote extends AppCompatActivity {
 
     SharedPreferences preferences;
 
-    Button addButton;
+    Button addButton, deleteButton;
     EditText text;
 
     @Override
@@ -29,8 +29,28 @@ public class NewNote extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_note);
 
+        Boolean hasNote = getIntent().getBooleanExtra("hasNote", false);
+        String oldNote = getIntent().getStringExtra("noteText");
+
         addButton = findViewById(R.id.addNewNoteButton);
+        deleteButton = findViewById(R.id.deleteNoteButton);
         text = findViewById(R.id.newNoteText);
+
+        if(hasNote) {
+            text.setText(oldNote);
+            addButton.setText("Update");
+            deleteButton.setVisibility(View.VISIBLE);
+        }else {
+            addButton.setText("Add");
+            deleteButton.setVisibility(View.GONE);
+        }
+
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(NewNote.this, "Delete listener", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
